@@ -14,7 +14,7 @@ from . import aws_api
 class BeginnerVideoFacialDetection:
 
     # This method is written in a way such that only one face can be detected at a time
-    def screenshot_video_camera2(self, faces):
+    def screenshot_video_camera(self, faces):
         source_files = [f for f in listdir('images/source/')]
         print(source_files)
         target_file = ""
@@ -73,7 +73,7 @@ class BeginnerVideoFacialDetection:
             # if (source_file != ""):
             #     break
             if count > 9:
-                source_file, target_file = self.screenshot_video_camera2(faces)
+                source_file, target_file = self.screenshot_video_camera(faces)
                 break
             count = count + 1
             # if cv2.waitKey(1) & 0xFF == ord('s'):
