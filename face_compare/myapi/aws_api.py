@@ -23,7 +23,7 @@ def compare_faces(sourceFile, targetFile):
 
     imageSource.close()
     imageTarget.close()
-    return len(response['FaceMatches'], message)
+    return len(response['FaceMatches']), message
 
 
 def main():

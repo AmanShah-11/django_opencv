@@ -16,7 +16,9 @@ class App extends React.Component{
     }
   }
   handleClick = () => {
-    axios.get("/myapi/allobjects/").then(res => this.setState({loggedin: true}))
+    // axios.get("/myapi/allobjects/").then(res => this.setState({loggedin: true}
+    console.log("hi")
+    axios.get("myapi/allobjects").then(res => this.setState({loggedin: true}))
   };
 
   handleSubmit = item => {
@@ -25,7 +27,7 @@ class App extends React.Component{
     //   return;
     // }
     // axios.post("/myapi/allobjects/", item)
-    axios.get("myapi").then(res => this.setState({loggedin: true}))
+    axios.get("myapi/allobjects").then(res => this.setState({loggedin: true}))
   };
 
   render(){
@@ -33,7 +35,7 @@ class App extends React.Component{
       <main className="content">
         <h1 className="text-black text-uppercase text-center my-4 mt-5">Video Detection Security System</h1>
         <div className="col-md-6 col-sm-10 mx-auto p-0">
-          <Button onSubmit={this.handleSubmit} className="btn btn-primary" size="lg" color="primary" block>Log In</Button>
+          <Button onClick={this.handleClick} className="btn btn-primary" size="lg" color="primary" block>Log In</Button>
         </div>
       </main>
     )

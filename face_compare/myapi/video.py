@@ -21,7 +21,7 @@ class BeginnerVideoFacialDetection:
         new_source_file = ""
         for source_file in source_files:
             print(source_file)
-            if pyautogui.locateOnScreen("images/source/{}".format(source_file), confidence=0.2):
+            if pyautogui.locateOnScreen("images/source/{}".format(source_file), confidence=0.3):
                 for x, y, w, h in faces:
                     my_screenshot = pyautogui.screenshot(region=[x, y, x+w, y+h])
                     # my_screenshot = pyautogui.hotkey('alt', 'printscreen')
@@ -72,7 +72,7 @@ class BeginnerVideoFacialDetection:
             # source_file, target_file = self.screenshot_video_camera2(faces)
             # if (source_file != ""):
             #     break
-            if count > 9:
+            if count > 25:
                 source_file, target_file = self.screenshot_video_camera(faces)
                 break
             count = count + 1
