@@ -18,7 +18,10 @@ from django.urls import path, include
 from myapi import views
 from rest_framework import routers
 
+router = routers.DefaultRouter()
+router.register(r'allobjects', views.UserAccessViews, 'allobjects')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myapi.urls'))
+    path('myapi/', include('myapi.urls'))
 ]

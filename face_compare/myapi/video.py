@@ -8,7 +8,7 @@ import pyautogui
 from os import listdir
 from os.path import isfile, join
 
-from .aws_api import
+from . import aws_api
 
 
 class BeginnerVideoFacialDetection:

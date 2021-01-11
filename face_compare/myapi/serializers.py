@@ -3,7 +3,6 @@ from .models import UserAccessModel
 
 
 class UserAccessSerializers(serializers.ModelSerializer):
-    allowed = serializers.SerializerMethodField()
-
-    def get_allowed(self):
-        pass
+    class Meta:
+        model = UserAccessModel
+        fields = ('id', 'source_file', 'target_file', 'loggedin')

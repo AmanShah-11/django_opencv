@@ -5,3 +5,4 @@ from django.db import models
 class UserAccessModel(models.Model):
     source_file = models.CharField(max_length=150)
     target_file = models.CharField(max_length=150)
+    loggedin = models.BooleanField(default=False)
